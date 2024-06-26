@@ -10,7 +10,7 @@ namespace paa.NET.Parallel
 {
     public static class ParallelCspSolver
     {
-        public static bool Solve(ParallelSudokuBoard sudokuBoard, List<ParallelDomain> domains)
+        public static bool Solve(SudokuBoard sudokuBoard, List<ParallelDomain> domains)
         {
             if (sudokuBoard.IsSolved()) return true;
 
@@ -75,7 +75,7 @@ namespace paa.NET.Parallel
 
         public IEnumerable<Digit> DomainDigits { get; private set; } = [];
 
-        public ParallelDomain(int row, int column, ParallelSudokuBoard sudokuBoard)
+        public ParallelDomain(int row, int column, SudokuBoard sudokuBoard)
         {
             Row = row;
             Column = column;
@@ -98,7 +98,7 @@ namespace paa.NET.Parallel
 
         }
 
-        public bool Revise(ParallelSudokuBoard sudokuBoard)
+        public bool Revise(SudokuBoard sudokuBoard)
         {
             DomainDigits = _allDigits
                 .Where(

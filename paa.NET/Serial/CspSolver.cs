@@ -79,7 +79,7 @@ namespace paa.NET.Serial
         public int Row { get; init; }
         public int Column { get; init; }
 
-        public IEnumerable<Digit> DomainDigits { get; private set; } = [];
+        public List<Digit> DomainDigits { get; private set; } = [];
 
         public Domain(int row, int column, SudokuBoard sudokuBoard)
         {
@@ -101,6 +101,7 @@ namespace paa.NET.Serial
                     .Distinct()
                     .Contains(d))
                 .ToList();
+            DomainDigits.Sort();
 
         }
 
@@ -121,6 +122,7 @@ namespace paa.NET.Serial
                     .Distinct()
                     .Contains(d))
                 .ToList();
+            DomainDigits.Sort();
 
             return DomainDigits.Any();
         }
