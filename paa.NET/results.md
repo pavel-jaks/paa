@@ -14,7 +14,7 @@ so it's unusable.
 
 ### Efficiency table
 
-*E = T_S / T_P*
+*E = S / p*
 
 | Board | Release | Debug |
 | ----- | ---: | ---: |
@@ -25,7 +25,7 @@ so it's unusable.
 
 ### Speedup table
 
-*S = E / p*
+*S = T_S / T_P_*
 
 | Board | Release | Debug |
 | ----- | ---: | ---: |
