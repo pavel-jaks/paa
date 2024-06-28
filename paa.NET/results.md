@@ -25,7 +25,7 @@ so it's unusable.
 
 ### Speedup table
 
-*S = T_S / T_P_*
+*S = T_S / T_P*
 
 | Board | Release | Debug |
 | ----- | ---: | ---: |
